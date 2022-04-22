@@ -1,0 +1,316 @@
+/*
+	Hugo Story by CaressOfSteel
+	A (modular, highly tweakable) responsive one-page theme for Hugo.
+	Ported from Story by HTML5UP.
+	This Hugo theme is licensed under the Creative Commons Attribution 3.0 License.
+*/
+
+/* Image */
+
+	.image {
+
+		border: 0;
+		border-radius: _size(border-radius);
+		display: inline-block;
+		position: relative;
+
+		img {
+			display: block;
+			border-radius: _size(border-radius);
+    		margin:0px 0px !important;
+		}
+
+		&.left,
+		&.right {
+		    &.xsm {
+		        width: 20%
+		        }
+		    &.sm {
+		        width: 25%
+		        }
+		    &.md {
+		        width: 50%
+		    }
+		    &.lg {
+		        width: 65%
+		    }
+
+			width: 40%;
+			max-width: 80%;
+			img {
+				width: 100%;
+			}
+		}
+
+		&.left {
+			float: left;
+			padding-left: 0;
+			margin: 0 1.5rem 0rem 0;
+			top: 0rem;
+		}
+
+		&.right {
+			float: right;
+			margin: 0 0 0rem 1.5rem;
+			top: 0rem;
+		}
+
+		&.fit {
+			display: block;
+			margin: 0 0 (_size(element-margin) - 1) 0;
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+
+		}
+
+		&.main {
+			display: block;
+			margin: 0 0 (_size(element-margin) * 1.5) 0;
+			width: 100%;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.image.style1 {
+
+	    @include color-typography(invert);
+		@include color-button(invert);
+		@include vendor('align-items', 'center');
+		@include vendor('display', 'flex');
+		@include vendor('flex-wrap', 'wrap');
+		@include vendor('justify-content', 'center');
+		position: relative;
+		width: 100%;
+		background-color: transparent;
+
+		> .forward, >.backward {
+// 			display: none;
+		}
+
+		> .inner {
+			@include vendor('align-items', 'inherit');
+			@include vendor('display', 'inherit');
+			@include vendor('flex-wrap', 'inherit');
+			@include vendor('justify-content', 'inherit');
+		}
+
+		article {
+			overflow: show;
+			position: relative;
+
+			.image {
+				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+				display: block;
+				width: 100%;
+
+				img {
+					display: block;
+					width: 100%;
+
+				}
+			}
+
+			.caption {
+				@include vendor('align-items', 'center');
+				@include vendor('display', 'flex');
+				@include vendor('flex-direction', 'column');
+				@include vendor('justify-content', 'center');
+				@include vendor('pointer-events', 'none');
+				@include vendor('transition', 'opacity #{_duration(transition)} ease-in-out');
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: transparentize(_palette(invert, bg), 1 - _misc(overlay-opacity));
+				opacity: 0;
+				padding: 1rem;
+				z-index: 1;
+				font-size: 70%;
+				  border-radius: (_size(border-radius) - 1);
+
+                @media screen and (max-width: 992px){
+                    font-size: 100%;
+                }
+                @media screen and (max-width: 737px){
+                    font-size: 85%;
+                }
+                @media screen and (max-width: 540px){
+                    font-size: 70%;
+                }
+
+
+				a {
+					@include vendor('pointer-events', 'auto');
+					font-size: inherit;
+				}
+
+				h2, h3, h4, h5, h6 {
+					font-size: 150%;
+					margin-top: 0.55rem;
+					margin-bottom: 0.25rem;
+					text-align: center;
+				}
+
+				> * {
+					max-width: 100%;
+					margin-bottom: 1rem;
+				}
+
+				> :last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&:hover {
+				.caption {
+					opacity: 1;
+				}
+			}
+		}
+    }
+
+
+	@include keyframes('gallery-modal-spinner') {
+		0% {
+			@include vendor('transform', 'rotate(0deg)');
+		}
+
+		100% {
+			@include vendor('transform', 'rotate(360deg)');
+		}
+	}
+
+	.image.lightbox {
+		.modal {
+			@include vendor('display', 'flex');
+			@include vendor('align-items', 'center');
+			@include vendor('justify-content', 'center');
+			@include vendor('pointer-events', 'none');
+			@include vendor('user-select', 'none');
+			@include vendor('transition', (
+				'opacity #{_duration(gallery-lightbox)} ease',
+				'visibility #{_duration(gallery-lightbox)}',
+				'z-index #{_duration(gallery-lightbox)}'
+			));
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			outline: 0;
+			background-color: transparentize(_palette(invert, bg), 1 - _misc(lightbox-opacity));
+			visibility: none;
+			opacity: 0;
+			z-index: 5;
+
+			&:before {
+				@include vendor('animation', 'gallery-modal-spinner 1s infinite linear');
+				@include vendor('transition', 'opacity #{_duration(gallery-lightbox) * 0.5} ease');
+				@include vendor('transition-delay', '#{_duration(gallery-lightbox)}');
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 4rem;
+				height: 4rem;
+				margin: -2rem 0 0 -2rem;
+				background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96px" height="96px" viewBox="0 0 96 96" zoomAndPan="disable"><style>circle {fill: transparent; stroke: #{_palette(invert, fg-bold)}; stroke-width: 1.5px; }</style><defs><clipPath id="corner"><polygon points="0,0 48,0 48,48 96,48 96,96 0,96" /></clipPath></defs><g clip-path="url(#corner)"><circle cx="48" cy="48" r="32"/></g></svg>');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 4rem;
+				opacity: 0;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0.5rem;
+				right: 0.5rem;
+				width: 4rem;
+				height: 4rem;
+				cursor: pointer;
+				background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64" zoomAndPan="disable"><style>line {stroke: #{_palette(invert, fg-bold)};stroke-width: 1.5px;}</style><line x1="20" y1="20" x2="44" y2="44" /><line x1="20" y1="44" x2="44" y2="20" /></svg>');
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 3rem;
+			}
+
+			.inner {
+				@include vendor('transform', 'translateY(0.75rem)');
+				@include vendor('transition', (
+					'opacity #{_duration(gallery-lightbox) * 0.5} ease',
+					'transform #{_duration(gallery-lightbox) * 0.5} ease'
+				));
+				opacity: 0;
+
+
+				img {
+					display: block;
+					max-width: 90vw;
+					max-height: 85vh;
+					box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.35);
+				}
+			}
+
+			&.visible {
+				@include vendor('pointer-events', 'auto');
+				visibility: visible;
+				opacity: 1;
+				z-index: 5;
+
+				&:before {
+					opacity: 1;
+				}
+			}
+
+			&.loaded {
+				.inner {
+					@include vendor('transform', 'translateY(0)');
+					@include vendor('transition', (
+						'opacity #{_duration(gallery-lightbox)} ease',
+						'transform #{_duration(gallery-lightbox)} ease'
+					));
+					opacity: 1;
+				}
+
+				&:before {
+					@include vendor('transition-delay', '0s');
+					opacity: 0;
+				}
+			}
+		}
+
+		@include breakpoint('<=medium') {
+			.modal {
+				.inner {
+					img {
+						max-width: 100vw;
+					}
+				}
+			}
+		}
+	}
+
+	// Mixin
+
+	@mixin color-gallery($p: null) {
+		.gallery {
+			article {
+				.image {
+					background-color: transparentize(_palette($p, fg-bold), 0.875);
+				}
+			}
+		}
+	}
+
+	@include color-gallery;
