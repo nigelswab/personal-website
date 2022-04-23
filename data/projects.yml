@@ -1,0 +1,84 @@
+# A Projects section created with the Portfolio widget.
+widget: "portfolio"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless: true  # This file represents a page section.
+active: true  # Activate this widget? true/false
+weight: 50  # Order that this section will appear.
+id: "projects"
+
+title: "Projects"
+subtitle: >-
+  Please find a sample of projects that I have worked on over the past few
+  years. This section is currently a work-in-progress as I continue to add
+  projects I had the privilege of working on throughout my degree and beyond.
+  <br><br>
+  Projects to be added to this website can be found in the
+  <a target="_blank" href="https://drive.google.com/drive/folders/1g6YWSuwczfRCVyRvEwZsNV3iEYup6l4s?usp=sharing" style="color: hsl(339, 90%, 68%)!important;">
+  Google Drive here</a>.
+
+# Page type to display. E.g. project.
+page_type: "project"
+
+# Filter toolbar (optional).
+# Add or remove as many filters (`[[content.filter_button]]` instances) as you like.
+# To show all items, set `tag` to "*".
+# To filter by a specific tag, set `tag` to an existing tag name.
+# To remove toolbar, delete/comment all instances of `[[content.filter_button]]` below.
+
+# Default filter index (e.g. 0 corresponds to the first `[[filter_button]]` instance below).
+filter_default: "0"
+
+filter_button:
+  - name: "Featured"
+    tag: "featured"
+
+  - name: "School"
+    tag: "school"
+
+  - name: "Co-op"
+    tag: "co-op"
+
+  - name: "Student Club"
+    tag: "student club"
+
+  - name: "Programming"
+    tag: "programming"
+
+  - name: "Design"
+    tag: "design"
+
+  - name: "All"
+    tag: "*"
+
+#design:
+# Choose how many columns the section has. Valid values: 1 or 2.
+columns: "2"
+
+# Toggle between the various page layout types.
+#   1 = List
+#   3 = Card
+#   5 = Showcase
+view: 5
+
+# For Showcase view, flip alternate rows?
+flip_alt_rows: false
+
+#design_background:
+  # Apply a background color, gradient, or image.
+  #   Uncomment (by removing `#`) an option to apply it.
+  #   Choose a light or dark text color by setting `text_color_light`.
+  #   Any HTML color name or Hex value is valid.
+
+  # Background color.
+  # color = "navy"
+
+  # Background gradient.
+  # gradient_start = "DeepSkyBlue"
+  # gradient_end = "SkyBlue"
+
+  # Background image.
+  # image = "background.jpg"  # Name of image in `static/img/`.
+  # image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+
+  # Text color (true=light or false=dark).
+  # text_color_light = true
+

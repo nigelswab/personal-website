@@ -1,0 +1,33 @@
+style: "color3 invert "
+id: "skills"
+title : "Skills"
+
+manufacturing_and_design:
+  - skill: "CNC/Manual Mills and Lathes"
+  - skill: "Laser Cutters"
+  - skill: "Water Jets"
+  - skill: "Laser Welders"
+  - skill: "Carbon Fibre Layups"
+  - skill: "Design for Manufacture and Assembly"
+  - skill: "Engineering Drawings"
+  - skill: "Finite Element Analysis (FEA)"
+
+programs_and_languages:
+  - skill: "SolidWorks <a href='files/CSWA_nigelswab_uvic_ca.pdf' target='_blank'>(Certified Associate)</a>"
+  - skill: "SolidWorks PDM"
+  - skill: "MasterCAM and HSM Works"
+  - skill: "git"
+  - skill: "MATLAB"
+  - skill: "C"
+  - skill: "HTML"
+  - skill: "CSS/SCSS"
+
+data_and_electrical:
+  - skill: "Data Visualization"
+  - skill: "NumPy, Pandas, MatPlotLib"
+  - skill: "Basic Signal Processing"
+  - skill: "Firmware Development"
+  - skill: "PID Design and Tuning"
+  - skill: "Sensor Instrumentation"
+  - skill: "Soldering"
+  - skill: "Basic Circuit Design"

@@ -1,0 +1,24 @@
+####################### Spotlight #########################
+style: "style6 orient-right
+        color2 invert image-position-center onscroll-image-fade-in"
+id: "education"
+title : "Education"
+content: |
+  <b>Bachelors of Engineering - Mechanical Engineering</b><br>
+   December 2021
+  | GPA: <a href="https://www.uvic.ca/registrar/students/policies/calc/index.php#" target="_blank" rel="noopener">
+  7.21 </a>
+courses:
+  - course : "<a href='https://heat.csc.uvic.ca/coview/course/2020011/MECH421'>MECH 421</a> - Mechanical Vibration"
+  - course : "<a href='https://heat.csc.uvic.ca/coview/course/2020051/MECH448'>MECH 448</a> - Intro to Muskuloskeletal Biomechanics"
+  - course : "<a href='https://heat.csc.uvic.ca/coview/course/2020011/MECH458'>MECH 458</a> - Mechatronics"
+  - course : "<a href='https://heat.csc.uvic.ca/coview/course/2020051/MECH460' target='_blank'>MECH 460</a> - Computer Aided Manufacturing"
+  - course : "<a href='https://heat.csc.uvic.ca/coview/course/2020051/MECH462'>MECH 462</a> - Small Business Startup and Organization"
+  - course : "<a href='https://www.uvic.ca/ecs/mechanical/assets/docs/MECH-498-Guidelines.pdf?utm_medium=redirect&utm_source=/engineering/mechanical/assets/docs/MECH-498-Guidelines.pdf&utm_campaign=redirect-usage'>MECH 498 </a> - Honours Thesis: Perfomance EV Simulation"
+  - course : "<a href='https://www.nwpolytech.ca/programs/courses/course.html?c_code=PE1015&c_program='>PE 1015</a> - Essentials of Human Physiology"
+
+button:
+  label: "Administrative Transcript"
+  link: "files/Nigel Swab - Administrative Transcript - University of Victoria.pdf"
+image: "images/UVIC_horz.png"
+image_size: "0.5rem"

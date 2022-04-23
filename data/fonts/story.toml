@@ -1,0 +1,16 @@
+# Font style metadata
+name = "Story"
+
+# Optional Google font URL
+# google_fonts = "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i"
+
+
+# Font families
+heading_font = ['Source Sans Pro', 'Helvetica', 'sans-serif']
+body_font = ['Source Sans Pro', 'Helvetica', 'sans-serif']
+nav_font = ['Source Sans Pro', 'Helvetica', 'sans-serif']
+mono_font = ['Courier New', "monospace"]
+
+# Font size
+font_size = "20"
+font_size_small = "16"

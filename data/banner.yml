@@ -1,0 +1,24 @@
+####################### Banner #########################
+style: "style1 orient-left content-align-left image-position-right fullscreen
+        color1 invert onload-image-fade-in onload-content-fade-right"
+title : "Nigel Swab"
+id: "home"
+subtitle: |
+  Mechanical Engineering Graduate <br> Seeking New Challenges
+content: |
+  As a recent graduate from the University of Victoria, I am a
+  passionate and outgoing engineer that's driven to grow by stepping out
+  of my comfort zone and continuously learning. I love to jump into new
+  challenges with both feet and I constantly find myself seeking opportunities
+  to gain new experiences and skills. I have a strong desire to improve others
+  lives through my work. The world is full of fascinating problems and I aspire
+  to be a part of the solution by becoming a driver of innovation. <br>
+
+buttons:
+  - label : "Resume"
+    link : "files/Nigel_Swab-2022-Mechanical_Engineer-General_CV.pdf"
+    target: "_blank"
+  - label : "Contact"
+    link : "mailto:nigelswab@gmail.com"
+feature_image : "images/banner1.jpg"
+

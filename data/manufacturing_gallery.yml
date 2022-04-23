@@ -1,0 +1,107 @@
+title: "Manufacturing"
+style: "style1 medium color3 invert lightbox onload-fade-in align-center"
+content: |
+  <p>
+  Through <a href="#experience"> co-ops </a> and involvement in
+  <a href="#student_club_experience">UVFR</a>, I gained valuable experience
+  manufacturing components and assemblies with a variety of materials and
+  methods. I have experience using CNC and manual mills and
+  lathes, laser cutters, water jets, and a variety of hand-tools.
+  Additionally, I have had experience with carbon fiber layups and laser welding.
+  Below is a small sample of components and assemblies I've made
+  over the past several years.
+  </p>
+
+id: "manufacturing"
+pictures:
+  - title: "Barbed Regenerative Refrigerator Fittings"
+    content: "10 of these barbed fittings were made using a combination of a CNC lathe, manual lathe,
+              and CNC mill."
+    material: "Ultem"
+    image: "images/gallery/manufacturing/Ultem - Barbed Regenerative Refrigerator Fitting (1).jpg"
+    thumb: "images/gallery/manufacturing/Ultem - Barbed Regenerative Refrigerator Fitting (1).jpg"
+
+#  - title: "Barbed Regenerative Refrigerator Fittings"
+#    content: "As can be seen, these parts were very small and required careful machining and fixturing."
+#    material: "Ultem"
+#    image: "images/gallery/manufacturing/Ultem - Barbed Regenerative Refrigerator Fitting (2).jpg"
+#    thumb: "images/gallery/manufacturing/Ultem - Barbed Regenerative Refrigerator Fitting (2).jpg"
+
+  - title: "Grounding Plate Nuts"
+    content: "5 of these custom grounding nuts were made using a manual lathe and CNC mill."
+    material: "Stainless Steel"
+    image: "images/gallery/manufacturing/Steel - Grounding Plate Nuts (1).jpg"
+    thumb: "images/gallery/manufacturing/Steel - Grounding Plate Nuts (1).jpg"
+
+  - title: "Small Drone Bushings"
+    content: "12 of these brass bushings were made using a manual lathe."
+    material: "Brass"
+    image: "images/gallery/manufacturing/Brass - Small Drone Bushings (1).jpg"
+    thumb: "images/gallery/manufacturing/Brass - Small Drone Bushings (1).jpg"
+
+  - title: "FSAE Busbar and Fuse Test Samples"
+    content: "3 variations of these bus bars and fuse samples were made using a water jet. The
+              nickel sheet was sandwiched between plywood sheets to maintain rigidity during machining."
+    material: "0.3 mm Nickel Sheet"
+    image: "images/gallery/manufacturing/Nickel - Busbars and Fuse Samples.jpg"
+    thumb: "images/gallery/manufacturing/Nickel - Busbars and Fuse Samples.jpg"
+
+  - title: "FSAE Small Event Prizes"
+    content: "Collaborated with a UVFR member to design and manufacture 10 small prizes for a Women in Engineering
+              and Computer Science event promoting STEM to highschool girls. Bases and removable race cars
+              (not shown) were 3-D printed while acrylic disks were laser cut."
+    material: "PLA and Acrylic"
+    image: "images/gallery/manufacturing/EngGirl - Trophies.jpg"
+    thumb: "images/gallery/manufacturing/EngGirl - Trophies.jpg"
+
+  - title: "FSAE Wheel Adapter Plates"
+    content: "Using a manual lathe, these two adapters were made to enable UVFR to use Mazda MX-5 wheels with their center-lock hubs"
+    material: "Aluminum [6061-T6]"
+    image: "images/gallery/manufacturing/Aluminum - Wheel Adapter Plates.jpg"
+    thumb: "images/gallery/manufacturing/Aluminum - Wheel Adapter Plates.jpg"
+
+  - title: "Laptop Stand"
+    content: "To improve my home-office setup, I designed and cut this laptop stand with a laser cutter."
+    material: "Plywood"
+    image: "images/gallery/manufacturing/Wood - Laptop Stand.jpg"
+    thumb: "images/gallery/manufacturing/Wood - Laptop Stand.jpg"
+
+  - title: "Small Fuel Cell Flow Fields"
+    content: "These fuel cell flow were made on a CNC mill. Flow channels were small and surface finish
+              was critical to the design, so a 0.03\" end mill was used."
+    material: "Cast Acrylic"
+    image: "images/gallery/manufacturing/Acrylic - Small Fuel Cell Flow Fields (1).jpg"
+    thumb: "images/gallery/manufacturing/Acrylic - Small Fuel Cell Flow Fields (1).jpg"
+
+  - title: "FSAE Aerodynamic Mounts"
+    content: "8 of these parts were made using a CNC mill."
+    material: "Aluminum [6061-T6]"
+    image: "images/gallery/manufacturing/Aluminum - Aero Mounts.jpg"
+    thumb: "images/gallery/manufacturing/Aluminum - Aero Mounts.jpg"
+
+  - title: "<a href='https://www.zaber.com/products/scanning-microscope-stages/X-ADR-AE' target='_blank' rel='noopener'> Microscope Stage</a> Adapter Plate"
+    content: "I designed and made this adapter plate to effectively measure the flatness of a prototype stage at Zaber.
+              A 0.5\" end mill was used in place face milling cutter due to a misaligned spindle."
+    material: "Aluminum [6061-T6]"
+    image: "images/gallery/manufacturing/Aluminum - ADR Adapter Plate.jpg"
+    thumb: "images/gallery/manufacturing/Aluminum - ADR Adapter Plate.jpg"
+
+  - title: "Vibrations Lab Spring Adapters (Pre-welding)"
+    content: "I designed and made these adapters to modify a vibrations lab apparatus that had issues
+              with spring alignment. These were then laser welded onto springs to replace the ."
+    material: "Steel Alloy"
+    image: "images/gallery/manufacturing/Steel - Vibrations Lab Spring Adapters (Pre-welding).jpg"
+    thumb: "images/gallery/manufacturing/Steel - Vibrations Lab Spring Adapters (Pre-welding).jpg"
+
+  - title: "Thermo-Acoustic Geat Pump Fittings"
+    content: "8 of these parts were made using a CNC mill."
+    material: "Stainless Steel"
+    image: "images/gallery/manufacturing/Steel - Thermo-Acoustic Heat Pump Fitting.jpg"
+    thumb: "images/gallery/manufacturing/Steel - Thermo-Acoustic Heat Pump Fitting.jpg"
+
+#  - title: "Small Fuel Cell Flow Fields"
+#    content: "Given that the flow channels were small and surface finish was critical to the design, so I used 0.03\" end mill."
+#    material: "Cast Acrylic"
+#    image: "images/gallery/manufacturing/Acrylic - Small Fuel Cell Flow Fields (2).jpg"
+#    thumb: "images/gallery/manufacturing/Acrylic - Small Fuel Cell Flow Fields (2).jpg"
+

@@ -1,0 +1,112 @@
+# Experience widget.
+widget: "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless: true  # This file represents a page section.
+active: true  # Activate this widget? true/false
+weight: 45  # Order that this section will appear.
+id: "student_club_experience"
+
+title: "Student Club Experience"
+subtitle: >-
+  <p>
+  In the first weeks of my engineering degree, I joined
+  <a style="color: hsl(339, 90%, 68%)!important;" href="https://fsae.engr.uvic.ca/" target="_blank" rel="noopener">
+    UVic Formula Racing (UVFR)
+  </a>,
+  a student engineering club that designs, builds, and tests a
+  open-wheeled race car annually. The club competes in
+  <a style="color: hsl(339, 90%, 68%)!important;" href="https://www.fsaeonline.com/" target="_blank" rel="noopener">Formula SAE (FSAE)</a>,
+  the largest collegiate design competition in the world that was created to
+  supplement student's education by providing real-world constraints and
+  hands-on skill often neglected by class. I spent 5 years dedicating most of
+  my free time developing both technical and soft skills in various roles
+  with UVFR.
+  </p>
+
+
+
+
+# Date format for experience
+#   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
+date_format: "Jan 2006"
+
+# Experiences.
+#   Required fields are `title`, `company`, and `date_start`.
+#   Leave `date_end` empty if it's your current employer.
+#   Begin multi-line descriptions with '>-'.
+
+content: ""
+#  Brief description of experience I suppose
+experiences:
+  - title: "Senior Design Engineer"
+    company: "UVic Formula Racing"
+    company_url: "https://fsae.engr.uvic.ca/"
+    location: "Victoria, BC"
+    date_start: "2021-05-01"
+    date_end: ""
+    overview: >-
+      * Provide insight and advice to the team, drawing from extensive
+        experience on the team.
+      * Attend design reviews and provide guidance ranging from design
+        fundamentals to manufacturability.
+      * Complete challenging projects, especially those requiring notable
+        pre-requisite knowledge.
+
+  - title: "Chief Engineer"
+    company: "UVic Formula Racing"
+    company_url: "https://fsae.engr.uvic.ca/"
+    location: "Victoria, BC"
+    date_start: "2020-05-01"
+    date_end: "2021-04-30"
+    overview: >-
+      * Organized and ran design reviews to ensure design integrity
+        and vehicle systems integration.
+      * Oversaw and approved major design decisions, drawings, and
+        manufacturing processes.
+      * Helped initiate and coordinate the development of the team's first
+        fully electric vehicle.
+
+  - title: "Team Lead - Vehicle Dynamics"
+    company: "UVic Formula Racing"
+    company_url: "https://fsae.engr.uvic.ca/"
+    location: "Victoria, BC"
+    date_start: "2018-05-01"
+    date_end: "2020-05-30"
+    overview: >-
+      *	Directed and taught up to 15 students at a time with verbal
+        and written communication.
+      * Directed the theoretical design and data-driven development of the
+        car through testing, simulation, and data analysis.
+      * Achieved top 10-20 percentile scores in competition design presentations
+        given to industry experts.
+      * Drove the decision to transition to new wheels and tires by
+        presenting my research, semi-empirical tire models, and full
+        vehicle simulations to the team.
+
+
+  - title: "Team Member - Suspension and Vehicle Dynamics"
+    company: "UVic Formula Racing"
+    company_url: "https://fsae.engr.uvic.ca/"
+    location: "Victoria, BC"
+    date_start: "2016-09-01"
+    date_end: "2018-05-30"
+    overview: >-
+      * Assisted with test-day setup, procedures, and data-acquisition.
+
+      * Completed projects ranging from semi-empirical tire modelling
+      to sheet-metal design.
+
+      * Assisted the Suspension and Vehicle Dynamics Lead with presenting in
+      the 2018 Design Event, leading to the team's first top 10 finish in
+      the event.
+
+
+
+images:
+  - loc: "fit"
+    caption: "2019 Competition Car - UV19"
+    content: "UV19 was the last car to be built before COVID-19 lockdowns and was one of the most ambitious builds in the team's recent history. Having switched wheel sizes and engine platforms, the only part that was not redesigned for the 2019 season was the steering wheel."
+    src: "images/uv19_front.jpg"
+  - loc: "fit"
+    caption: "2019 Competition Car - UV19"
+    content: "Although it failed to finish endurance, we achieved the team's best results in the skid-pad (18th) and autocross events (25th), showing the potential of the new vehicle platform given further development and improved reliability."
+    src: "images/uv19_rear.jpg"

@@ -1,0 +1,163 @@
+# Experience widget.
+widget: "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
+headless: true  # This file represents a page section.
+active: true  # Activate this widget? true/false
+weight: 40  # Order that this section will appear.
+id: "work_experience"
+
+title: "Work Experience"
+subtitle: >-
+  Throughout my undergraduate degree, I was fortunate to work with 5 companies
+  and accumulate 24-months of experience in a broad range of roles and
+  responsibilities.
+
+# Date format for experience
+#   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
+date_format: "Jan 2006"
+
+# Experiences.
+#   Required fields are `title`, `company`, and `date_start`.
+#   Leave `date_end` empty if it's your current employer.
+#   Begin multi-line descriptions with '>-'.
+
+content: ""
+#  Brief description of experience I suppose
+experiences:
+  - title: "Test Engineering Co-op"
+    company: "Zaber Technologies"
+    company_url: "https://www.zaber.com/"
+    location: "Vancouver, BC"
+    date_start: "2022-01-01"
+    date_end: "2022-08-30"
+    #      Zaber designs and manufactures precision motion control devices for a
+    #      range of industries including optics, microscopy, life sciences, and
+    #      industrial automation.
+    overview: >-
+      Created, conducted, and documented tests on electromechanical precision
+      motion control devices to investigate performance issues, define specifications,
+      or quantify capabilities. This process regularly included developing testing
+      systems and involved mechanical, electrical, and control system design.
+
+    details: >-
+      * Improved the speed and thrust capabilities of the linear thrust
+        tester by 55% and 150%, respectively, through electromechanical
+        design, component specification, and Python scripting.
+      * Improved sampling rate of linear thrust tester by 350% using
+        threading while adding further data measurements such as stage
+        position.
+      * Identified a thrust-bearing preload issue in the manufacturing
+        process through investigative testing.
+      * Investigated and identified thermal errors in high-precision
+        stage testing introduced by testing setup and procedure.
+        Collaborated to improve thermal stability by modifying testing
+        procedures and equipment.
+
+  - title: "Mechanical Engineering Co-op"
+    company: "Vivitro Labs"
+    company_url: "https://vivitrolabs.com/"
+    location: "Victoria, BC"
+    date_start: "2021-09-01"
+    date_end: "2021-12-31"
+    overview: >-
+      Collaborated as a part of the R&D team to design, test, and analyze
+      mechanical and electrical parts and systems for prosthetic heart valve
+      testing equipment. This included defining design objectives and constraints,
+      creating parts and drawings in Solidworks CAD, coordinating with machine shops,
+      along with using manual mills and lathes, to manufacture prototypes,
+      and developing tests to investigate prototype performance.
+    details: >-
+      * Designed and specified a high-speed camera system (lens, mounting,
+        and lighting) for swift and repeatable installation across multiple
+        prosthetic heart accelerated wear-testers.
+      * Designed, manufactured, and tested fluid flow and compliance
+        modifications to reduce hydraulic shock in a prototype accelerated
+        wear tester.
+      * Created, reviewed, and submitted drawings for manufacturing using
+        SolidWorks CAD.
+      * Performed vibration simulation and analysis using SolidWorks and
+        calculations in Microsoft Excel.
+
+  - title: "Machine Shop Co-op"
+    company: "University of Victoria"
+    company_url: "https://www.uvic.ca/"
+    location: "Victoria, BC"
+    date_start: "2019-04-01"
+    date_end: "2019-08-30"
+    overview: >-
+      Under the immediate supervision of a machinist
+      with over 30 years of experience, and a professional engineer,
+      I provided machining assistance in the Mechanical Engineering
+      department's machining facility. Additionally, I provided guidance to
+      undergraduate and graduate students with respect to design and drawings.
+    details: >-
+      * Assisted undergraduate and graduate students with design and
+        research projects.
+      * Fabricated several parts to high tolerances with both CNC and
+        manual mills and lathes.
+      * Operated the waterjet, laser cutting, and laser welding machines.
+
+
+  - title: "Industrial Engineering Intern"
+    company: "Department of National Defence"
+    company_url: "https://www.canada.ca/en/department-national-defence.html"
+    location: "Esquimalt, BC"
+    date_start: "2018-09-01"
+    date_end: "2018-12-30"
+    overview: >-
+      Investigated, researched, and implemented engineering projects to
+      improve industrial capabilities or make the Fleet Maintenance Facility
+      less polluting, more efficient, productive, and safer.
+    details: >-
+      * Designed and oversaw the production of steel engine mounts for
+        a 5850 kg diesel generator using SolidWorks, FEA, and hand calculations.
+      * Contributed to a new labeling system for the central storage facility,
+        and created documentation and labelling in AutoCAD.
+      * Collaborated with a contractor to design and build an acid wash rinse
+        tank with a counter-flow baffle system in SolidWorks.
+      * Designed a mobile station for inspecting and re-packaging life-suits using
+        SolidWorks.
+
+  - title: "Student Estimator"
+    company: "PCL"
+    company_url: "https://www.pcl.com/ca/en"
+    location: "Calgary, AB"
+    date_start: "2018-01-01"
+    date_end: "2018-04-30"
+    overview: >-
+      Compiled job estimates for commercial projects as a lead estimator,
+      conducted detailed analysis of contract documents, completed
+      quantity take-off of all labor, equipment, and materials, established
+      critical path schedules, solicited pricing from subcontractors and
+      suppliers, and supplied final tenders for submission.
+
+    details: >-
+      * Led and secured a multi-phase 1 million-dollar bank renovation
+        project bid.
+      * Assisted in winning a 27-million-dollar condominium project
+        bid.
+      * Contributed to the submission of over 10 tender bids and
+        submissions.
+      * Showed leadership and management skills in a fast-paced team
+        environment.
+
+#images:
+#  - loc: "fit"
+#    caption: "Zaber Technologies"
+#    content: "Several Zaber products including linear stages, rotary stages, and microscope slide stages"
+#    src: "images/zaber.PNG"
+#  - loc: "fit"
+#    caption: "Vivitro Labs"
+#    content: "Pulse Duplicator"
+#    src: "images/vivitro.PNG"
+#  - loc: "fit"
+#    caption: "University of Victoria"
+#    content: "Mechanical Engineering Machine Shop"
+#    src: "https://i.ytimg.com/vi/0C5lImTW5UM/maxresdefault.jpg"
+#  - loc: "fit"
+#    caption: "Department of National Defence"
+#    content: "Fleet Maintenance Facility - Cape Breton"
+#    src: "https://images.squarespace-cdn.com/content/v1/5ab42e8a45776e91770e9631/1524240192528-87ZBOV9AU18UGK62QICQ/engcomp-project-Defence04.jpg"
+#  - loc: "fit"
+#    caption: "PCL Construction"
+#    content: ""
+#    src: "https://wpassets.brainstation.io/app/uploads/2020/11/13094904/PCL-Digital-Magazine-1.jpg"
