@@ -1,0 +1,16 @@
+<!--fancy_pics-->
+<div class="lightbox image style1 {{ .Get "loc" }}">
+  <article>
+    <a class="image" href="{{ .Get "src" }}" >
+      <img src="{{ .Get "src" }}" alt="" />
+    </a>
+    <div class="caption">
+      {{ with .Get "caption" }}
+        <h2>{{ . | safeHTML }}</h2>
+      {{ end }}
+      {{ with .Get "content" }}
+        <p style="text-align: center">{{ . | safeHTML }}</p>
+      {{ end }}
+    </div>
+  </article>
+</div>

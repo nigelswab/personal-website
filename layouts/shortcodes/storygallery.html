@@ -1,0 +1,4 @@
+<!--storygallery-->
+{{ $filename := .Get "filename" }}
+{{ $context := index .Site.Data.project_galleries $filename }}
+{{- partial "gallery" $context -}}

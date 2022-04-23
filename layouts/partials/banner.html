@@ -1,0 +1,37 @@
+<!-- Banner -->
+<section id="{{ .id }}" class="banner {{ .style }}">
+    <div class="content">
+        {{ with .title }}<h1>{{ . }}</h1>{{ end }}
+        {{ with .subtitle }}<p style="color: inherit;" class="page-subtitle">{{ . | safeHTML }}</p>{{ end }}
+
+        {{ with .start_date }}
+            <a class="" style="text-align: left; margin: 0 0 0 0; padding: 0 0 0 0; font-size: 1rem;">
+                {{ . }}
+            </a>
+        {{ end }}
+        {{ with .finish_date }}
+            <a class="" style="text-align: left; margin: 0 0 0 0; padding: 0 0 0 0; font-size: 1rem;">
+                - {{ . }}
+            </a>
+        {{ end }}
+
+        {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
+
+        {{ with .button }}
+            <ul class="actions stacked">
+                <li><a href="{{ .link }}" class="button primary large wide smooth-scroll-middle" target="_blank" >{{ .label }}</a></li>
+            </ul>
+        {{ end }}
+
+        {{ if .buttons }}
+            {{ range .buttons }}
+            {{ $target := "" }}
+            {{ with .target }} {{ $target = . }} {{ end }}
+        <a href="{{ .link }}" class="button primary wide smooth-scroll-middle add_margins" target="{{ $target }}" >{{ .label }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+    {{ with .feature_image }}<div class="image">
+        <img src="{{.}}" alt="Hugo Story" />
+    </div>{{end}}
+</section>

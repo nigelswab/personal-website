@@ -1,0 +1,17 @@
+{{ $current_page := . }}
+<!-- Gallery -->
+
+<section id="{{ .id }}" class="{{ .style }}" style="padding-top: 5%; background: #212529;">
+    {{ if ne .title ""}}
+        <div class="container">
+            <h1>{{ .title }}</h1>
+            <p>{{ .content | safeHTML }}</p><br>
+        </div>
+    {{ end }}
+    <!-- Gallery -->
+    <div class="gallery {{ .style }}">
+        {{ range .pictures }}
+            {{ partial "picture" . }}
+        {{ end }}
+    </div>
+</section>

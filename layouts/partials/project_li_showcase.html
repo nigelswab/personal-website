@@ -1,0 +1,61 @@
+{{ $item := .item }}
+{{ $widget := .widget }}
+{{ $flip := .flip_alt }}
+
+{{ $do_link := true }}
+{{ if $item.Params.external_link | or $item.Content }}
+  {{ $do_link = true }}
+{{ else }}
+  {{ $do_link = false }}
+{{ end }}
+
+{{ $link := .link }}
+{{ $target := .target }}
+{{ $align := "" }}
+
+
+{{ $order := "order-md-1" }}
+{{ if and ($flip | default true) (not (modBool .index 2)) }}
+  {{ $order = "order-md-3" }}
+  {{ $align = "float-right" }}
+{{ end }}
+
+{{ $js_tag_classes := delimit (apply (apply $item.Params.tags "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
+
+<div class="col-lg-12 project-item isotope-item {{ $js_tag_classes | safeHTMLAttr }}" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="row align-items-center">
+    <div class="col-12 col-md-6 order-md-2">
+      <h3 class="article-title mb-0 mt-0" itemprop="name">
+        {{- if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }} itemprop="url">{{end -}}
+        {{ $item.Title | markdownify | emojify }}
+        {{- if $do_link}}</a>{{end -}}
+      </h3>
+
+      {{ $summary := "" }}
+      {{ if $item.Params.summary }}
+        {{ $summary = $item.Params.summary }}
+      {{ else if $item.Truncated }}
+        {{ $summary = $item.Summary }}
+      {{ end }}
+      {{ with $summary }}
+      <div class="article-style" itemprop="articleBody">
+        {{ . | safeHTML }}
+      </div>
+      {{ end }}
+
+      <div class="btn-links">
+        {{ partial "page_links" (dict "page" $item "is_list" 0) }}
+      </div>
+
+    </div>
+    <div class="col-12 col-md-6 {{$order}}">
+      {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
+      {{ with $resource }}
+      {{ $image := .Resize "500x" }}
+      {{if $do_link}}<a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{end}}
+        <img class="{{ $align }}" src="{{ $image.RelPermalink }}" itemprop="image" alt="" style="border-radius: 3%; margin-bottom: 10px;">
+      {{if $do_link}}</a>{{end}}
+      {{end}}
+    </div>
+  </div>
+</div>

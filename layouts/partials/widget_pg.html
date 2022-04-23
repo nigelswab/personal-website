@@ -1,0 +1,45 @@
+{{/* Notify JS that this is a widget page */}}
+<span class="js-widget-page d-none"></span>
+
+{{ $widget_path := .widget}}
+{{ $data := .data }}
+
+{{/* Begin widget styling */}}
+{{ $bg := .Params.design.background }}
+{{ $style := "" }}
+
+{{ if $bg.color }}
+    {{ $style = printf "background-color: %s;" ($bg.color | default "transparent") }}
+{{ end }}
+
+{{ if and $bg.gradient_start $bg.gradient_end }}
+    {{ $style = printf "%sbackground-image: linear-gradient(%s, %s);" $style $bg.gradient_start $bg.gradient_end }}
+{{ end }}
+
+{{ if $bg.image }}
+    {{ $darken := "" }}
+    {{ if $bg.image_darken }}
+        {{ $darken = printf "linear-gradient(rgba(0, 0, 0, %s), rgba(0, 0, 0, %s))," (string $bg.image_darken) (string $bg.image_darken) }}
+    {{ end }}
+    {{/* See Hugo note on linking assets in styles: https://github.com/gohugoio/hugoThemes#common-permalink-issues */}}
+    {{ $style = printf "%sbackground-image: %s url('%s');" $style $darken (printf "img/%s" $bg.image | absURL) }}
+{{ end }}
+
+{{ with .Params.design.spacing.padding }}
+    {{ $style_pad := printf "padding: %s;" (delimit . " ") }}
+    {{ $style = print $style $style_pad }}
+{{ end }}
+
+{{ with .Params.advanced.css_style }}
+    {{ $style = print $style . }}
+{{ end }}
+
+{{ $css_classes := .Params.advanced.css_class | default "" }}
+{{ $extra_attributes := "" }}
+{{ $use_container := true }}
+
+<section id="{{ $data.id }}" class="home-section {{printf "wg-%s" (replace .Params.widget "_" "-")}} {{if $bg.text_color_light}}dark{{end}} {{if $bg.image}}parallax{{end}} {{with $css_classes}}{{.}}{{end}}" {{with $style}}style="{{. | safeCSS}}"{{end}} {{print $extra_attributes | safeHTMLAttr}}>
+  {{if $use_container}}<div class="container">{{end}}
+    {{ partial $widget_path $data }}
+  {{if $use_container}}</div>{{end}}
+</section>

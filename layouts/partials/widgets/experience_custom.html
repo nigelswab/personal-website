@@ -1,0 +1,80 @@
+<!--<section id="experience"></section>-->
+<section id="{{ .id }}">
+  <div class="row">
+    <div class="col-12 col-lg-4">
+      <h1>{{ .title }}</h1>
+      <p>{{ .subtitle }}</p><br>
+        {{ if .images }}
+          {{ range .images }}
+          <div class="lightbox image style1 {{ .loc }}">
+            <article>
+              <a class="image" href="{{ .src }}" >
+                <img src="{{ .src }}" alt="" />
+              </a>
+              <div class="caption">
+                {{ with .caption }}
+                  <h2>{{ . | safeHTML }}</h2>
+                {{ end }}
+                {{ with .content }}
+                  <p style="text-align: center">{{ . | safeHTML }}</p>
+                {{ end }}
+              </div>
+            </article>
+          </div>{{ end }}
+        {{ end }}
+
+    </div>
+    <div class="col-12 col-lg-8">
+      {{ .content }}
+
+      {{ if .experiences }}
+      {{ $exp_len := len .experiences }}
+      {{ range $idx, $key := sort .experiences ".date_start" "desc" }}
+      <div class="row experience">
+        <!-- Timeline -->
+        <div class="col-auto text-center flex-column d-none d-sm-flex">
+          <div class="row h-50">
+            <div class="col {{if gt $idx 0}}border-right{{end}}">&nbsp;</div>
+            <div class="col">&nbsp;</div>
+          </div>
+          <div class="m-2">
+            <span class="badge badge-pill border {{if not .date_end}}exp-fill{{end}}">&nbsp;</span>
+          </div>
+          <div class="row h-50">
+            <div class="col {{if lt $idx (sub $exp_len 1)}}border-right{{end}}">&nbsp;</div>
+            <div class="col">&nbsp;</div>
+          </div>
+        </div>
+        <!-- Content -->
+        <div class="col py-2">
+          <div style="background-color: #212529;" class="card">
+            <div class="card-body">
+              <h4 class="card-title exp-title mt-0 mb-1">{{.title | markdownify | emojify}}</h4>
+              <h4 class="card-title exp-company text-muted my-0">
+                {{- with .company_url}}<a href="{{.}}" target="_blank" rel="noopener">{{end}}
+                {{.company | markdownify | emojify}}{{with .company_url}}</a>{{end -}}
+              </h4>
+              <div class="text-muted exp-meta">
+                {{ (time .date_start).Format (.date_format | default "January 2006") }} –
+                {{ if .date_end}}
+                  {{ (time .date_end).Format (.date_format | default "January 2006") }}
+                {{else}}
+                  {{ i18n "present" | default "Present" }}
+                {{end}}
+                {{with .location}}
+                  <span class="middot-divider"></span>
+                  <span>{{.}}</span>
+                {{end}}
+              </div>
+              <hr>
+              <p class="card-text" style="line-height: 1.25rem; ">{{ .overview | markdownify }}</p>
+              {{ partial "expand" (dict "details" .details "divClass" "card-text" "label" "Highlights and Achievements") }}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{end}}
+      {{end}}
+    </div>
+  </div>
+</section>

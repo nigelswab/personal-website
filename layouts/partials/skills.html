@@ -1,0 +1,42 @@
+<!-- Skills -->
+<section style="padding: 5% 10%" class="spotlight {{ .style }}"{{ with .id }} id="{{ . }}"{{ end }}>
+    <div class="col-12 text-center">
+        {{ with .title }}<h1 style="font-size: 3.3rem;">{{ . }}</h1>{{ end }}
+        {{ with .content }}<h4>{{ . | safeHTML }}</h4>{{ end }}
+        {{ with .button }}
+            <a href="{{ .link }}" target="_blank" rel="noopener" class="button small fit primary">{{ .label }}</a>
+        {{ end }}
+    </div>
+    <div class="row align-items-top">
+
+        <div class="col-4">
+                {{ if .manufacturing_and_design }}
+                    <h4 style="margin-bottom: 0.25rem;"><b>Manufacturing and Design: </b></h4>
+                        {{ range .manufacturing_and_design }}
+                            {{ .skill | safeHTML }}<br>
+                        {{ end }}
+                {{ end }}
+        </div>
+
+        <div class="col-4 text-center">
+                {{ if .programs_and_languages }}
+                    <h4 style="margin-bottom: 0.25rem;"><b>Programs and Languages: </b></h4>
+                        {{ range .programs_and_languages }}
+                            {{ .skill | safeHTML }}<br>
+                        {{ end }}
+                {{ end }}
+        </div>
+
+        <div class="col-4 text-right">
+                {{ if .data_and_electrical }}
+                    <h4 style="margin-bottom: 0.25rem;"><b>Data Analysis and Electrical Systems: </b></h4>
+                    <ul>
+                        {{ range .data_and_electrical }}
+                            {{ .skill | safeHTML }}<br>
+                        {{ end }}
+                    </ul>
+                {{ end }}
+        </div>
+
+    </div>
+</section>

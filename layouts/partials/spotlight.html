@@ -1,0 +1,17 @@
+<!-- Spotlight -->
+<section style="padding: 0.1% 10% 0.5% 10%" class="spotlight {{ .style }}"{{ with .id }} id="{{ . }}"{{ end }}>
+    <div class="content">
+        {{ with .title }}<h1>{{ . }}</h1>{{ end }}
+        {{ with .content }}<h4>{{ . | safeHTML }}</h4>{{ end }}
+        {{ with .button }}
+        <ul class="actions stacked">
+            <a href="{{ .link }}" target="_blank" rel="noopener" class="button small fit primary">
+                {{ .label }}
+            </a></li>
+        </ul>
+        {{ end }}
+    </div>
+    <div class="image">
+        <img src="{{ .image }}" alt="" />
+    </div>
+</section>

@@ -1,0 +1,26 @@
+<!-- Spotlight -->
+<section style="padding: 5% 10%" class="spotlight {{ .style }}"{{ with .id }} id="{{ . }}"{{ end }}>
+    <div class="row align-items-center">
+        <div class="col-12 col-sm-6 col-lg-4 text-left">
+            {{ with .title }}<h1 style="font-size: 3.3rem;">{{ . }}</h1>{{ end }}
+            {{ with .content }}<h4>{{ . | safeHTML }}</h4>{{ end }}
+            {{ with .button }}
+                <a href="{{ .link }}" target="_blank" rel="noopener" class="button small fit primary">{{ .label }}</a>
+            {{ end }}
+        </div>
+        <div class="col-8 col-sm-6 col-lg-3 ml-lg-5 mr-lg-n5">
+            <img src="{{ .image }}" alt="" />
+        </div>
+        <div class="col-12 col-lg-5 text-lg-right text-center mt-4 mt-lg-0">
+            <div>
+                {{ if .courses }}
+                    <h4 style="margin-bottom: 0.25rem;"><b>Notable Electives: </b></h4>
+                    {{ range .courses }}
+                        {{ .course | safeHTML }}  <i class="fas fa-user-graduate" style="padding-left:0.25rem"></i> <br>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+</section>

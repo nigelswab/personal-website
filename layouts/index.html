@@ -1,0 +1,13 @@
+{{- define "main" -}}
+
+  	{{ partial "banner" site.Data.banner }}
+	{{ partial "education" site.Data.education }}
+	{{ partial "widget_pg" (dict "widget" "widgets/experience_custom" "data" site.Data.experience) }}
+	{{ partial "widget_pg" (dict "widget" "widgets/experience_fsae" "data" site.Data.fsae_experience) }}
+	{{ partial "widget_pg" (dict "widget" "widgets/portfolio" "data" site.Data.projects) }}
+	{{ partial "gallery" site.Data.manufacturing_gallery }}
+	{{ partial "skills" site.Data.skills }}
+<!--	{{ partial "template/footer" . }}-->
+
+{{- end -}}
+

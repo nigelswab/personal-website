@@ -1,0 +1,19 @@
+<article>
+    <a href="{{ .image }}" class="image" >
+        <img src="{{ .thumb }}" alt="" />
+    </a>
+    <div class="caption">
+        <h3><b>{{ .title | safeHTML }}</b></h3>
+        <p>{{ .content | safeHTML }}</p>
+
+        {{ with .material }}
+            <p style="font-size: 1.0rem;">Material: {{ . }}</p>
+        {{ end }}
+
+        {{ with .button }}
+        <ul class="actions fixed">
+            <li><span class="button small">{{ . }}</span></li>
+        </ul>
+        {{ end }}
+    </div>
+</article>

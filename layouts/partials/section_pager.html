@@ -1,0 +1,26 @@
+{{ $str := "" }}
+<div class="post-nav">
+  <div class="row align-items-center mb-md-2"
+       style="background: transparent; border-radius: 3px;">
+  <div class="col-6 text-left">
+    {{if .PrevInSection}}
+    {{ if eq .Type "docs" }}{{ $str = "next" }}{{else}}{{ $str = "previous" }}{{end}}
+<!--    <div class="post-nav-item">-->
+      <div class="meta-nav" style="color: #ccc; font-size: 1rem; font-weight: 550;">{{ i18n $str }}</div>
+      <a href="{{.PrevInSection.RelPermalink}}" rel="prev">{{.PrevInSection.Title}}</a>
+<!--    </div>-->
+    {{end}}
+  </div>
+  <div class="col-6 text-right">
+    {{if .NextInSection}}
+    {{/* For the docs layout, prev/next labels are reversed. */}}
+    {{ if eq .Type "docs" }}{{ $str = "previous" }}{{else}}{{ $str = "next" }}{{end}}
+<!--    <div class="post-nav-item">-->
+      <div class="meta-nav" style="color: #ccc; font-size: 1rem; font-weight: 550;">{{ i18n $str }}</div>
+      <a href="{{.NextInSection.RelPermalink}}" rel="next">{{.NextInSection.Title}}</a>
+<!--    </div>-->
+    {{end}}
+  </div>
+  </div>
+</div>
+
