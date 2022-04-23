@@ -4,3 +4,6 @@
 [submodule "themes/video"]
 	path = themes/video
 	url = https://github.com/martignoni/hugo-video.git
+[submodule "themes/hugo-academia"]
+	path = themes/hugo-academia
+	url = https://github.com/themefisher/academia-hugo.git
