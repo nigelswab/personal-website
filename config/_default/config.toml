@@ -27,9 +27,9 @@ disqusShortname = ""
 
 # Name of Academia theme folder in `themes/`.
 theme = [
-         "hugo-story",
-         "academia-hugo",
-         "hugo-video",
+         "story",
+         "hugo-academia",
+         "video",
          ]
 
 # Get last modified date for content from Git?
